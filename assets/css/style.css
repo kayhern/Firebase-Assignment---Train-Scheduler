@@ -1,0 +1,41 @@
+#top-header {
+    color: rgb(219, 197, 205) !important;
+    background-color: teal !important;
+    text-align: center !important;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#table-top {
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 1500px;
+    position: relative;
+}
+
+#train-form {
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 1500px;
+    position: relative;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40px;
+    margin-right: 50px;
+    background-color: pink;
+    color: darkslategray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+#button {
+    background-color: palevioletred !important;
+}
+
+div.form-group {
+    background-color: rgb(219, 197, 205);
+}

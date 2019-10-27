@@ -17,6 +17,61 @@
 </head>
 
 <body>
+    <div class="jumbotron jumbotron-fluid" id="top-header">
+        <div class="container">
+            <h1 class="display-4">Anytime is Train Time</h1>
+            <p class="lead">All Aboard the Hot Mess Express!</p>
+            <p class="lead">Choo Choo!</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h2>Current Train Schedule</h2>
+    <table class="table table-hover" id="table-top">
+        <thead>
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Hogwarts Express</th>
+                <td>Hogwarts</td>
+                <td>30</td>
+                <td> </td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <h2>Add Train</h2>
+    <form id="train-form">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Train Name</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Train Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Destination</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Desination">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">First Train Time (hh:mm - military time)</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="First Train Time">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Frequency (min)</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Frequency">
+        </div>
+        <button type="submit" class="btn btn-primary" id="button">Submit</button>
+    </form>
+
 
     <!--Javascript and AJAX File Reference-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
