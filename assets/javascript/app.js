@@ -1,8 +1,10 @@
 //Overview of homework: In this assignment, you'll create a train schedule application that incorporates Firebase to host arrival and departure data. Your app will retrieve and manipulate this information with Moment.js. This website will provide up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station.
 
-//Firebase configuration
+//my tutor advised to add this constant for moment.js to function
+const moment = require("moment");
 
 $(document).ready(function () {
+    //Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyBPU4q63PiNOGyr2qrb-OP2etgX3PQCUpw",
         authDomain: "train-schedule-project-12.firebaseapp.com",
@@ -29,6 +31,7 @@ $(document).ready(function () {
         var firstTrainTime = $("#firstTrainTime").val().trim();
         var frequency = $("#Frequency").val().trim();
 
+        //variable for new train being added to the table and all of the elements pertaining to the train
         var newTrain = {
             name: name,
             place: destination,
@@ -39,18 +42,25 @@ $(document).ready(function () {
         //adding train input to firebase
         database.ref().push(newTrain);
 
+        //validating the train input fields are working
         console.log(newTrain.name);
         console.log(newTrain.destination);
         console.log(newTrain.time);
         console.log(newTrain.frequency);
 
-
+        //clearing train input fields after form is submitted
         $("#trainName").val("");
         $("#Destination").val("");
         $("#firstTrainTime").val("");
         $("#Frequency").val("");
 
+
+
     });
+
+    //populating the html with train input from above and adding into firebase
+
+
 
 
 
