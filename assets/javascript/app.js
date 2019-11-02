@@ -82,19 +82,21 @@ $(document).ready(function () {
             //  $("<td>").text(minutesAway),
         );
 
-        //new role into the top table
-        $("#table-top > tbody").append(newRow);
+        //https://momentjs.com/docs/#/displaying/difference/ - displaying the difference between two times 
+
+        let minutesAway =
+
+            //new role into the top table
+            $("#table-top > tbody").append(newRow);
 
     });
 
 });
 
 
-//4. M: ensure website updates with data
 //5. L: ensure time data is altered properly (arrival time is relative to current time AND in military format)
 //https://momentjs.com/docs/#/displaying/difference/
 //6. XL: ensure the data remains up to date when more is added
-//7. L: ensure the data gets updates when other machines view
 
 //Train Name - static 1:1
 //Train Destination - static 1:1
@@ -107,6 +109,4 @@ $(document).ready(function () {
 //Next Arrival - First Train Time Plus Frequency
 //Minutes Away - Subtract Minute Frequency from Arrival time
 
-//watch database video
-//look at other assignments for inspiration
 //regular expressions for military time
