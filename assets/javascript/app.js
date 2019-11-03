@@ -81,9 +81,9 @@ $(document).ready(function () {
         let newRow = $("<tr>").append(
             $("<td>").text(name),
             $("<td>").text(destination),
-            $("<td>").text(nextArrival),
+            $("<td>").text(firstTrainTime),
             $("<td>").text(frequency),
-            $("<td>").text(minutesAway),
+            //    $("<td>").text(minutesAway),
         );
 
         //new role into the top table
