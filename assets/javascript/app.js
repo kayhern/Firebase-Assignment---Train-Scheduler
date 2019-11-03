@@ -1,8 +1,5 @@
 //Overview of homework: In this assignment, you'll create a train schedule application that incorporates Firebase to host arrival and departure data. Your app will retrieve and manipulate this information with Moment.js. This website will provide up-to-date information about various trains, namely their arrival times and how many minutes remain until they arrive at their station.
 
-//my tutor advised to add this constant for moment.js to function
-// const moment = require("moment");
-
 //borrowing functions form this class activity: https://harvard.bootcampcontent.com/Harvard-Coding-Boot-Camp/hu-cam-fsf-pt-09-2019-u-c/blob/master/Week_7/01-Activities/17-TimeSheet/Solved/timesheetLogic.js
 
 $(document).ready(function () {
@@ -64,25 +61,30 @@ $(document).ready(function () {
         console.log(childSnapshot.val());
 
         //variable time again
-        var name = childSnapshot.val().name;
-        var destination = childSnapshot.val().place;
-        var firstTrainTime = childSnapshot.val().time;
-        var frequency = childSnapshot.val().frequency;
+        let name = childSnapshot.val().name;
+        let destination = childSnapshot.val().place;
+        let firstTrainTime = childSnapshot.val().time;
+        let frequency = childSnapshot.val().frequency;
+        let currentTime = moment().format('hh:mm')
+        console.log(currentTime);
+        console.log(firstTrainTime);
+        console.log(frequency);
 
         //moment.js to calculate the minutes until arrival based upon the frequency and first start time
         //https://momentjs.com/docs/#/displaying/difference/ - displaying the difference between two times 
+        //calculating minutes away
+        // let nextArrival = moment().diff()
+        // let minutesAway = "";
 
-        let minutesAway =
 
-            //new row on table
-            var newRow = $("<tr>").append(
-                $("<td>").text(name),
-                $("<td>").text(destination),
-                $("<td>").text(firstTrainTime),
-                $("<td>").text(frequency),
-                //this is the moment.js calculation
-                //  $("<td>").text(minutesAway),
-            );
+        //new row on table
+        let newRow = $("<tr>").append(
+            $("<td>").text(name),
+            $("<td>").text(destination),
+            $("<td>").text(nextArrival),
+            $("<td>").text(frequency),
+            $("<td>").text(minutesAway),
+        );
 
         //new role into the top table
         $("#table-top > tbody").append(newRow);
@@ -95,16 +97,5 @@ $(document).ready(function () {
 //5. L: ensure time data is altered properly (arrival time is relative to current time AND in military format)
 //https://momentjs.com/docs/#/displaying/difference/
 //6. XL: ensure the data remains up to date when more is added
-
-//Train Name - static 1:1
-//Train Destination - static 1:1
-//First Train Time - military time - static but alters table
-//Frequency - minutes - static 1:1 && alters table
-
-//Train Name - static 1:1
-//Train Destination - static 1:1
-//Frequency - static 1:1
-//Next Arrival - First Train Time Plus Frequency
-//Minutes Away - Subtract Minute Frequency from Arrival time
 
 //regular expressions for military time
