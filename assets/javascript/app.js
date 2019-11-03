@@ -70,24 +70,22 @@ $(document).ready(function () {
         var frequency = childSnapshot.val().frequency;
 
         //moment.js to calculate the minutes until arrival based upon the frequency and first start time
-
-
-        //new row on table
-        var newRow = $("<tr>").append(
-            $("<td>").text(name),
-            $("<td>").text(destination),
-            $("<td>").text(firstTrainTime),
-            $("<td>").text(frequency),
-            //this is the moment.js calculation
-            //  $("<td>").text(minutesAway),
-        );
-
         //https://momentjs.com/docs/#/displaying/difference/ - displaying the difference between two times 
 
         let minutesAway =
 
-            //new role into the top table
-            $("#table-top > tbody").append(newRow);
+            //new row on table
+            var newRow = $("<tr>").append(
+                $("<td>").text(name),
+                $("<td>").text(destination),
+                $("<td>").text(firstTrainTime),
+                $("<td>").text(frequency),
+                //this is the moment.js calculation
+                //  $("<td>").text(minutesAway),
+            );
+
+        //new role into the top table
+        $("#table-top > tbody").append(newRow);
 
     });
 
